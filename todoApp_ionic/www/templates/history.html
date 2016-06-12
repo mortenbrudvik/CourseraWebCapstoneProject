@@ -1,0 +1,15 @@
+<ion-view view-title="Completed Tasks">
+  <ion-nav-buttons side="right  ">
+    <button class="button button-icon icon ion-plus" ng-click="showAddTaskForm()" ng-if="showTasks">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="task in tasks | filter:{status: 'Completed'}" >
+        {{task.title}}
+        <span ng-hide="((task.worktime/60) | number:0) == 0" class="badge">
+                    {{(task.worktime/60) | number:0}} min</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

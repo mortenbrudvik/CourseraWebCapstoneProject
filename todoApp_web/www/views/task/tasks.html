@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5">
+        <ul class="list-group">
+            <button  href="#" class="list-group-item " ng-repeat="task in tasks | orderBy: '-status'" ng-click="startTask(task)" ng-disabled="task.status=='Completed'">
+                <span ng-class="{'lineThrough': (task.status == 'Completed')}">{{task.title}}</span>
+                <span ng-hide="((task.worktime/60) | number:0) == 0" class="badge">
+                    {{(task.worktime/60) | number:0}} min</span>
+            </button>
+        </ul>
+    </div>
+    <div class="col-sm-5"></div>
+</div>
+
+
+

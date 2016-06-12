@@ -1,0 +1,25 @@
+
+.jumbotron {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    height: 741px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    margin-bottom: 0; /*add this*/
+}
+
+*:focus
+{
+    outline: none!important ;
+}
+
+.nohighlight:focus {
+    outline:none!important ;
+}
+
+.lineThrough {
+    text-decoration:line-through;
+}
+

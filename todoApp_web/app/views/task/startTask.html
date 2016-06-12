@@ -1,0 +1,13 @@
+<div class="ngdialog-message">
+        <h3> {{message}}</h3>
+    <div class="">
+        <h2 class="text-center">
+            <timer  interval="1000" countdown="25*60">{{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer>
+        </h2>
+        <div class="">&nbsp;</div>
+        <button ng-click="stopOrResumeTask()">{{timerButtonText}}</button>
+        <button ng-click="completeTask()">Complete Task</button>
+    </div>
+    <div>
+    </div>
+</div>

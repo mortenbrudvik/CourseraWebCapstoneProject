@@ -1,0 +1,32 @@
+<nav class="navbar navbar-default">
+    <div class="navbar-inner" style="-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;">
+        <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <span><img src="./images/logo.png" height="30"/></span>
+                Pomodoro Task Manager
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-if="!loggedIn" >
+                <a href="#" ng-click="openLogin()">
+                <span class="glyphicon glyphicon-log-in"></span> Log in</a>
+            </li>
+
+            <li ng-if="loggedIn" >
+                <a href="#" ng-click="addTask()">
+                    <span class="glyphicon glyphicon-plus"></span></a>
+            </li>
+            <li ng-if="loggedIn">
+                <a>{{username}}</a>
+            </li>
+            <li ng-if="loggedIn">
+                <a href="#" ng-click="logOut()">
+                    <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+            </li>
+        </ul>
+    </div>
+        </div>
+</nav>
+
